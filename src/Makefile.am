@@ -6,4 +6,5 @@ bin_PROGRAMS = isqrt
 isqrt_SOURCES = main.c
 isqrt_LDADD = libisqrt.la -lm
 
-AM_CPPFLAGS += -D__STDC_INT64__
+AM_CPPFLAGS = -D__STDC_INT64__
+AM_CPPFLAGS += -I $(srcdir)/glitter/src
