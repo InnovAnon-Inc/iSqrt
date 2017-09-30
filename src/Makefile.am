@@ -3,7 +3,7 @@ AM_CPPFLAGS = -D__STDC_INT64__
 SUBDIRS = ../glitter
 AM_CPPFLAGS += $(top_srcdir)/glitter/src
 
-LIBISQRT_LIBADD = -lm
+include Makefile-LIBADD.inc
 
 lib_LTLIBRARIES = libisqrt.la
 libisqrt_la_LIBADD = $(LIBISQRT_LIBADD)
