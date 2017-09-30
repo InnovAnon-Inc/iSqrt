@@ -1,10 +1,12 @@
+LIBISQRT_LIBADD = -lm
+
 lib_LTLIBRARIES = libisqrt.la
-libisqrt_la_SOURCES = isqrt.c
-libisqrt_la_LIBADD = -lm
+libisqrt_la_LIBADD = $(LIBISQRT_LIBADD)
 include_HEADERS = isqrt.h
-bin_PROGRAMS = isqrt
-isqrt_SOURCES = main.c
-isqrt_LDADD = libisqrt.la -lm
+bin_PROGRAMS = isqrt-test
+isqrt_test_LDADD = libisqrt.la $(LIBISQRT_LIBADD)
 
 AM_CPPFLAGS = -D__STDC_INT64__
-AM_CPPFLAGS += -I $(srcdir)/../glitter/src
+
+SUBDIRS = ../glitter
+AM_CPPFLAGS += ../glitter/src
