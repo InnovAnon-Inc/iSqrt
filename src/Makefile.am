@@ -1,7 +1,7 @@
 AM_CPPFLAGS = -D__STDC_INT64__
 
 SUBDIRS = ../glitter
-AM_CPPFLAGS += ../glitter/src
+AM_CPPFLAGS += $(top_srcdir)/glitter/src
 
 LIBISQRT_LIBADD = -lm
 
