@@ -10,7 +10,7 @@ extern "C" {
 
 #include <glitter.h>
 
-#include <stat.h>
+/*#include <stat.h>*/
 
 #ifndef NDEBUG
 unsigned short isqrt_orig (unsigned long a)
