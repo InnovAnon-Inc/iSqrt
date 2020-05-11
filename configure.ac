@@ -27,7 +27,8 @@ AC_CHECK_HEADERS([glitter.h])
 LIBISQRT_LIBADD="`PATH=src:$PATH libisqrt_config --libs`"
 AC_SUBST(LIBISQRT_LIBADD)
 
-ISQRT_TEST_LIBADD="libisqrt.la `PATH=src:$PATH isqrt_test_config --libs`"
+#ISQRT_TEST_LIBADD="libisqrt.la `PATH=src:$PATH isqrt_test_config --libs`"
+ISQRT_TEST_LIBADD="`PATH=src:$PATH isqrt_test_config --libs`"
 AC_SUBST(ISQRT_TEST_LIBADD)
 
 INNOVANON_WARNINGS([])
