@@ -20,4 +20,5 @@ isqrt_test_LDADD = @ISQRT_TEST_LIBADD@
 #isqrt_test_LDFLAGS = @ISQRT_TEST_LIBADD@
 #isqrt_test_LDADD = -lisqrt $(LIBISQRT_LIBADD)
 #EXTRA_isqrt_test_DEPENDENCIES = -lisqrt
-EXTRA_isqrt_test_DEPENDENCIES = libisqrt.la
+#EXTRA_isqrt_test_DEPENDENCIES = libisqrt.la
+isqrt_test_DEPENDENCIES = libisqrt.la
