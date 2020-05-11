@@ -6,7 +6,7 @@ AM_CPPFLAGS = -D__STDC_INT64__
 #endif
 
 #include Makefile-LIBADD.inc
-dist_bin_SCRIPTS = libisqrt_config
+dist_bin_SCRIPTS = libisqrt_config isqrt_test_config
 
 lib_LTLIBRARIES = libisqrt.la
 libisqrt_la_LIBADD = $(LIBISQRT_LIBADD)
