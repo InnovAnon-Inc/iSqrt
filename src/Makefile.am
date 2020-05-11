@@ -13,6 +13,6 @@ libisqrt_la_LIBADD = $(LIBISQRT_LIBADD)
 include_HEADERS = isqrt.h
 
 bin_PROGRAMS = isqrt-test
-#isqrt_test_LDADD = libisqrt.la $(LIBISQRT_LIBADD)
+isqrt_test_LDADD = libisqrt.la $(LIBISQRT_LIBADD)
 #isqrt_test_LDADD = $(ISQRT_TEST_LIBADD)
-isqrt_test_LDADD = -lisqrt $(LIBISQRT_LIBADD)
+#isqrt_test_LDADD = -lisqrt $(LIBISQRT_LIBADD)
