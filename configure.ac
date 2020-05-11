@@ -24,6 +24,9 @@ AC_CHECK_HEADERS([glitter.h])
 #AC_CHECK_LIB([stdlib],[])
 #AC_CHECK_LIB([math],[])
 
+LIBISQRT_LIBADD="`PATH=src:$PATH libisqrt_config --libs`"
+AC_SUBST(LIBISQRT_LIBADD)
+
 INNOVANON_WARNINGS([])
 
 AC_OUTPUT
