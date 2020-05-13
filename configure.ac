@@ -24,7 +24,7 @@ AC_CHECK_HEADERS([glitter.h])
 #AC_CHECK_LIB([stdlib],[])
 #AC_CHECK_LIB([math],[])
 
-srcdir = @srcdir@
+#srcdir = @srcdir@
 LIBISQRT_LIBADD="`PATH=@srcdir@src:$PATH libisqrt_config --libs`"
 #LIBISQRT_LIBADD="`PATH=$(srcdir)src:$PATH libisqrt_config --libs`"
 #LIBISQRT_LIBADD="`PATH=src:$PATH libisqrt_config --libs`"
