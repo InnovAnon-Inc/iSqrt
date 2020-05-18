@@ -9,7 +9,7 @@ libisqrt_la_LIBADD   = $(GLITTER_LIBS) -lm
 include_HEADERS = isqrt.h
 
 bin_PROGRAMS += isqrt-test
-isqrt_test_CPPFLAGS = $(GLITTER_CFLAGS)
-isqrt_test_LDADD    = $(GLITTER_LIBS) -lm
+isqrt_test_CPPFLAGS =         $(GLITTER_CFLAGS)
+isqrt_test_LDADD    = -lisqrt $(GLITTER_LIBS) -lm
 EXTRA_isqrt_test_DEPENDENCIES = libisqrt.la
 
