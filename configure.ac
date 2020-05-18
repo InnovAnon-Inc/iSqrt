@@ -8,8 +8,8 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
  Makefile
  src/Makefile
- src/libisqrt.pc.in
- src/isqrt-test.pc.in
+ src/libisqrt.pc
+ src/isqrt-test.pc
 ])
 
 PKG_PROG_PKG_CONFIG
