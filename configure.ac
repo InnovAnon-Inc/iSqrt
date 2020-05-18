@@ -8,36 +8,26 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
  Makefile
  src/Makefile
+ src/libisqrt.pc.in
+ src/isqrt-test.pc.in
 ])
+
+PKG_PROG_PKG_CONFIG
 
 AC_ARG_ENABLE([use-submodules],
     AS_HELP_STRING([--enable-use-submodules], [Enable use submodules]))
 AM_CONDITIONAL([USE_SUBMODULES], [test x"$enable_use_submodules" = "xyes"])
 
 AC_CONFIG_MACRO_DIR([m4])
-#AC_CONFIG_SUBDIRS([glitter])
 
 AC_CHECK_HEADERS([stdlib.h])
 AC_CHECK_HEADERS([math.h])
-AC_CHECK_HEADERS([glitter.h])
+#AC_CHECK_HEADERS([glitter.h])
 
 #AC_CHECK_LIB([stdlib],[])
 #AC_CHECK_LIB([math],[])
 
-#srcdir=@srcdir@
-#LIBISQRT_LIBADD="`PATH=@srcdir@src:$PATH libisqrt_config --libs`"
-#LIBISQRT_LIBADD="`PATH=$(srcdir)src:$PATH libisqrt_config --libs`"
-#LIBISQRT_LIBADD="`PATH=${srcdir}src:$PATH libisqrt_config --libs`"
-LIBISQRT_LIBADD="`PATH=src:$PATH libisqrt_config --libs`"
-AC_SUBST(LIBISQRT_LIBADD)
-
-#ISQRT_TEST_LIBADD="libisqrt.la `PATH=src:$PATH isqrt_test_config --libs`"
-#ISQRT_TEST_LIBADD="`PATH=@srcdir@src:$PATH isqrt_test_config --libs`"
-#ISQRT_TEST_LIBADD="`PATH=$(srcdir)src:$PATH isqrt_test_config --libs`"
-#ISQRT_TEST_LIBADD="`PATH=${srcdir}src:$PATH isqrt_test_config --libs`"
-ISQRT_TEST_LIBADD="`PATH=src:$PATH isqrt_test_config --libs`"
-#ISQRT_TEST_LIBADD="-lisqrt `PATH=src:$PATH isqrt_test_config --libs`"
-AC_SUBST(ISQRT_TEST_LIBADD)
+PKG_CHECK_MODULES([GLITTER],[glitter],,)
 
 INNOVANON_WARNINGS([])
 
